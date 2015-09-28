@@ -48,6 +48,10 @@ public class AssemblyVM {
 			new InstructionXor()
 		});
 	}
+	
+	public void addInstructions(Instruction[] instructions) {
+		this.instructions.addAll(Arrays.asList(instructions));
+	}
 
 	public String getLastError() {
 		return lastError;
