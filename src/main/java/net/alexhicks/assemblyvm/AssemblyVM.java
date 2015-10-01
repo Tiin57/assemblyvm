@@ -1,5 +1,6 @@
 package net.alexhicks.assemblyvm;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +29,8 @@ public class AssemblyVM {
 	private final List<Instruction> instructions;
 	
 	public AssemblyVM() {
-		this.instructions = Arrays.asList(new Instruction[] {
+		this.instructions = new ArrayList<Instruction>();
+		this.instructions.addAll(Arrays.asList(new Instruction[] {
 			new InstructionAdd(),
 			new InstructionAnd(),
 			new InstructionDec(),
@@ -46,7 +48,7 @@ public class AssemblyVM {
 			new InstructionSto(),
 			new InstructionSub(),
 			new InstructionXor()
-		});
+		}));
 	}
 	
 	public void addInstructions(Instruction[] instructions) {
